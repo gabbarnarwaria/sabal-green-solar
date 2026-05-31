@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Allow: /logo.png
+Sitemap: https://sabalgreensolar.com/sitemap.xml

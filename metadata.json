@@ -1,0 +1,7 @@
+{
+  "name": "Sabal Green Solar",
+  "description": "Top solar company in Gwalior, MP providing high-efficiency solar panels, hybrid/on-grid systems, and expert EPC solutions.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
