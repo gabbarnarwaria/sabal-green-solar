@@ -249,9 +249,44 @@
     "errorMessage": "कुछ गलत हो गया। कृपया पुनः प्रयास करें।"
   },
   "quote": {
-    "title": "कोटेशन का अनुरोध करें",
-    "subtitle": "अपनी सौर परियोजना के लिए निःशुल्क परामर्श और कोटेशन प्राप्त करें",
-    "submit": "अनुरोध सबमिट करें"
+    "badge": "कोटेशन का अनुरोध करें",
+    "heroTitle": "अपनी",
+    "heroTitleHighlight": "सौर यात्रा शुरू करें",
+    "heroDescription": "अपनी विशिष्ट आवश्यकताओं और स्थान के अनुसार अनुकूलित सौर ऊर्जा समाधान प्राप्त करने के लिए नीचे दिया गया फॉर्म भरें।"
+  },
+  "inquiryForm": {
+    "title": "निःशुल्क",
+    "titleHighlight": "सोलर कोटेशन प्राप्त करें",
+    "description": "फॉर्म भरें और हमारे विशेषज्ञ आपकी जरूरतों के लिए अनुकूलित सौर समाधान के साथ आपसे संपर्क करेंगे।",
+    "benefits": {
+      "survey": "निःशुल्क साइट सर्वेक्षण",
+      "feasibility": "तकनीकी व्यवहार्यता",
+      "roi": "वित्तीय ROI विश्लेषण"
+    },
+    "fields": {
+      "fullName": "पूरा नाम",
+      "fullNamePlaceholder": "अविनाश गौर",
+      "phoneNumber": "फ़ोन नंबर",
+      "phoneNumberPlaceholder": "+91 98765 43210",
+      "email": "ईमेल पता",
+      "emailPlaceholder": "avinash@gmail.com",
+      "installationType": "स्थापना का प्रकार",
+      "location": "परियोजना स्थान",
+      "locationPlaceholder": "शहर, राज्य"
+    },
+    "installationTypes": {
+      "industrialRooftop": "औद्योगिक छत",
+      "commercialRooftop": "वाणिज्यिक छत",
+      "residentialRooftop": "आवासीय छत",
+      "utilityScale": "यूटिलिटी स्केल फार्म",
+      "agricultural": "कृषि पंप"
+    },
+    "submitButton": "कोटेशन का अनुरोध करें",
+    "submitting": "भेजा जा रहा है...",
+    "successTitle": "अनुरोध प्राप्त हुआ!",
+    "successMessage": "आपकी रुचि के लिए धन्यवाद। हमारी टीम आपकी आवश्यकताओं की समीक्षा करेगी और जल्द ही आपसे संपर्क करेगी।",
+    "sendAnother": "एक और अनुरोध भेजें",
+    "errorMessage": "कुछ गलत हो गया। कृपया पुनः प्रयास करें।"
   },
   "common": {
     "learnMore": "और जानें",

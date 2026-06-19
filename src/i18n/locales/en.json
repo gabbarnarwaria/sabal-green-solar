@@ -249,9 +249,44 @@
     "errorMessage": "Something went wrong. Please try again."
   },
   "quote": {
-    "title": "Request a Quote",
-    "subtitle": "Get a free consultation and quote for your solar project",
-    "submit": "Submit Request"
+    "badge": "Request a Quote",
+    "heroTitle": "Start Your",
+    "heroTitleHighlight": "Solar Journey",
+    "heroDescription": "Fill out the form below to receive a customized solar energy solution tailored to your specific needs and location."
+  },
+  "inquiryForm": {
+    "title": "Get a Free",
+    "titleHighlight": "Solar Quote",
+    "description": "Fill out the form and our experts will get back to you with a customized solar solution for your needs.",
+    "benefits": {
+      "survey": "Free Site Survey",
+      "feasibility": "Technical Feasibility",
+      "roi": "Financial ROI Analysis"
+    },
+    "fields": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Avinash Gaur",
+      "phoneNumber": "Phone Number",
+      "phoneNumberPlaceholder": "+91 98765 43210",
+      "email": "Email Address",
+      "emailPlaceholder": "avinash@gmail.com",
+      "installationType": "Installation Type",
+      "location": "Project Location",
+      "locationPlaceholder": "City, State"
+    },
+    "installationTypes": {
+      "industrialRooftop": "Industrial Rooftop",
+      "commercialRooftop": "Commercial Rooftop",
+      "residentialRooftop": "Residential Rooftop",
+      "utilityScale": "Utility Scale Farm",
+      "agricultural": "Agricultural Pump"
+    },
+    "submitButton": "Request Quote",
+    "submitting": "Sending...",
+    "successTitle": "Request Received!",
+    "successMessage": "Thank you for your interest. Our team will review your requirements and contact you shortly.",
+    "sendAnother": "Send another request",
+    "errorMessage": "Something went wrong. Please try again."
   },
   "common": {
     "learnMore": "Learn More",
