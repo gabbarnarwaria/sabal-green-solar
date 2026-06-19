@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Phone } from 'lucide-react';
+import { Menu, X, Sun, Phone, Languages } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '@/src/lib/utils';
-
-const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Company', href: '/company' },
-  { name: 'Services', href: '/#services' },
-  { name: 'Calculator', href: '/calculator' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Contact', href: '/contact' },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+
+  const navLinks = [
+    { name: t('nav.home'), href: '/' },
+    { name: t('nav.company'), href: '/company' },
+    // { name: t('nav.services'), href: '/#services' },
+    { name: t('nav.calculator'), href: '/calculator' },
+    { name: t('nav.careers'), href: '/careers' },
+    { name: t('nav.contact'), href: '/contact' },
+  ];
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'hi' : 'en';
+    i18n.changeLanguage(newLang);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,22 +69,44 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-solar-green/10 hover:bg-solar-green/20 text-solar-dark transition-all border border-solar-green/30"
+            title="Toggle Language"
+          >
+            <Languages className="w-4 h-4" />
+            <span className="text-xs font-semibold">
+              {i18n.language === 'en' ? 'हिं' : 'EN'}
+            </span>
+          </button>
           <Link
             to="/request-quote"
             className="bg-solar-green text-white px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-solar-accent transition-all shadow-md shadow-solar-green/20"
           >
             <Phone className="w-4 h-4" />
-            Get a Quote
+            {t('nav.getQuote')}
           </Link>
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-solar-vibrant"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-solar-green/10 hover:bg-solar-green/20 text-solar-dark transition-all border border-solar-green/30"
+            title="Toggle Language"
+          >
+            <Languages className="w-3.5 h-3.5" />
+            <span className="text-xs font-semibold">
+              {i18n.language === 'en' ? 'हिं' : 'EN'}
+            </span>
+          </button>
+          <button
+            className="text-solar-vibrant"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
@@ -104,7 +133,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="bg-solar-green text-white px-6 py-3 rounded-xl text-center font-bold"
             >
-              Get a Quote
+              {t('nav.getQuote')}
             </Link>
           </motion.div>
         )}

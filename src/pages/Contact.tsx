@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Clock, Send, Facebook, Twitter, Linkedin, Instagram, CheckCircle2, AlertCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Navbar from '@/src/components/Navbar';
 import Footer from '@/src/components/Footer';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
     firstName: '',
@@ -69,10 +71,10 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <span className="text-solar-green font-bold tracking-widest uppercase text-sm">Contact Us</span>
-            <h1 className="text-5xl md:text-6xl mt-6 mb-8 text-solar-dark">Let's Power Your <span className="text-solar-green">Future</span></h1>
+            <span className="text-solar-green font-bold tracking-widest uppercase text-sm">{t('contact.badge')}</span>
+            <h1 className="text-5xl md:text-6xl mt-6 mb-8 text-solar-dark">{t('contact.heroTitle')} <span className="text-solar-green">{t('contact.heroTitleHighlight')}</span></h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Have a project in mind? Our team of experts is ready to help you transition to clean, sustainable energy.
+              {t('contact.heroDescription')}
             </p>
           </motion.div>
         </div>
@@ -84,15 +86,15 @@ export default function Contact() {
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-8">
               <div className="bg-solar-light p-8 rounded-[32px] border border-gray-100">
-                <h3 className="text-2xl font-bold mb-8 text-solar-dark">Get in Touch</h3>
+                <h3 className="text-2xl font-bold mb-8 text-solar-dark">{t('contact.title')}</h3>
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 bg-white text-solar-green rounded-xl flex items-center justify-center shrink-0 shadow-sm">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="font-bold text-solar-dark">Office Address</p>
-                      <p className="text-gray-500 text-sm">BL 135 Deen Dayal Nagar, Gwalior, Madhya Pradesh</p>
+                      <p className="font-bold text-solar-dark">{t('contact.officeAddress')}</p>
+                      <p className="text-gray-500 text-sm">{t('contact.officeAddressText')}</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -100,9 +102,9 @@ export default function Contact() {
                       <Phone className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="font-bold text-solar-dark">Phone Number</p>
-                      <p className="text-gray-500 text-sm">+91 8982823613</p>
-                      <p className="text-gray-500 text-sm">+91 8962295336</p>
+                      <p className="font-bold text-solar-dark">{t('contact.phoneNumber')}</p>
+                      <p className="text-gray-500 text-sm">{t('contact.phoneNumber1')}</p>
+                      <p className="text-gray-500 text-sm">{t('contact.phoneNumber2')}</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -110,8 +112,8 @@ export default function Contact() {
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="font-bold text-solar-dark">Email Address</p>
-                      <p className="text-gray-500 text-sm">info@sabalgreensolar.com</p>
+                      <p className="font-bold text-solar-dark">{t('contact.emailAddress')}</p>
+                      <p className="text-gray-500 text-sm">{t('contact.emailText')}</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -119,21 +121,18 @@ export default function Contact() {
                       <Clock className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="font-bold text-solar-dark">Working Hours</p>
-                      <p className="text-gray-500 text-sm">Mon - Sat: 9:00 AM - 6:00 PM</p>
+                      <p className="font-bold text-solar-dark">{t('contact.workingHours')}</p>
+                      <p className="text-gray-500 text-sm">{t('contact.workingHoursText')}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-solar-green p-8 rounded-[32px] text-white shadow-lg shadow-solar-green/20">
-                <h4 className="text-xl font-bold mb-6">Follow Us</h4>
+                <h4 className="text-xl font-bold mb-6">{t('contact.followUs')}</h4>
                 <div className="flex gap-4">
                   {[
                     { Icon: Facebook, url: 'https://www.facebook.com/profile.php?id=61588784233867' },
-                    { Icon: Twitter, url: '#' },
-                    { Icon: Linkedin, url: '#' },
-                    { Icon: Instagram, url: '#' },
                   ].map(({ Icon, url }, i) => (
                     <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white hover:text-solar-green transition-all">
                       <Icon className="w-6 h-6" />
@@ -153,24 +152,24 @@ export default function Contact() {
                     className="h-full flex flex-col items-center justify-center text-center py-12"
                   >
                     <CheckCircle2 className="w-20 h-20 text-solar-green mb-6" />
-                    <h3 className="text-3xl font-bold text-solar-dark mb-4">Message Sent!</h3>
+                    <h3 className="text-3xl font-bold text-solar-dark mb-4">{t('contact.successTitle')}</h3>
                     <p className="text-gray-600 max-w-md">
-                      Thank you for reaching out. We have received your message and will get back to you as soon as possible.
+                      {t('contact.successMessage')}
                     </p>
                     <button 
                       onClick={() => setStatus('idle')}
                       className="mt-8 text-solar-green font-bold hover:underline"
                     >
-                      Send another message
+                      {t('contact.sendAnother')}
                     </button>
                   </motion.div>
                 ) : (
                   <>
-                    <h3 className="text-3xl font-bold mb-8 text-solar-dark">Send us a Message</h3>
+                    <h3 className="text-3xl font-bold mb-8 text-solar-dark">{t('contact.formTitle')}</h3>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <label className="text-sm font-bold text-solar-dark">First Name</label>
+                          <label className="text-sm font-bold text-solar-dark">{t('contact.firstName')}</label>
                           <input 
                             type="text" 
                             name="firstName"
@@ -178,11 +177,11 @@ export default function Contact() {
                             value={formData.firstName}
                             onChange={handleChange}
                             className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-solar-green transition-all" 
-                            placeholder="Avinash" 
+                            placeholder={t('contact.firstNamePlaceholder')}
                           />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-sm font-bold text-solar-dark">Last Name</label>
+                          <label className="text-sm font-bold text-solar-dark">{t('contact.lastName')}</label>
                           <input 
                             type="text" 
                             name="lastName"
@@ -190,13 +189,13 @@ export default function Contact() {
                             value={formData.lastName}
                             onChange={handleChange}
                             className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-solar-green transition-all" 
-                            placeholder="Gaur" 
+                            placeholder={t('contact.lastNamePlaceholder')}
                           />
                         </div>
                       </div>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <label className="text-sm font-bold text-solar-dark">Email Address</label>
+                          <label className="text-sm font-bold text-solar-dark">{t('contact.email')}</label>
                           <input 
                             type="email" 
                             name="email"
@@ -204,11 +203,11 @@ export default function Contact() {
                             value={formData.email}
                             onChange={handleChange}
                             className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-solar-green transition-all" 
-                            placeholder="avinash@gmail.com" 
+                            placeholder={t('contact.emailPlaceholder')}
                           />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-sm font-bold text-solar-dark">Phone Number</label>
+                          <label className="text-sm font-bold text-solar-dark">{t('contact.phone')}</label>
                           <input 
                             type="tel" 
                             name="phoneNumber"
@@ -216,33 +215,33 @@ export default function Contact() {
                             value={formData.phoneNumber}
                             onChange={handleChange}
                             className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-solar-green transition-all" 
-                            placeholder="+91 98765 43210" 
+                            placeholder={t('contact.phonePlaceholder')}
                           />
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-solar-dark">Subject</label>
+                        <label className="text-sm font-bold text-solar-dark">{t('contact.subject')}</label>
                         <select 
                           name="subject"
                           value={formData.subject}
                           onChange={handleChange}
                           className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-solar-green transition-all"
                         >
-                          <option>Solar Installation Inquiry</option>
-                          <option>Service & Maintenance</option>
-                          <option>Partnership Opportunity</option>
-                          <option>Other</option>
+                          <option>{t('contact.subjectOptions.inquiry')}</option>
+                          <option>{t('contact.subjectOptions.service')}</option>
+                          <option>{t('contact.subjectOptions.partnership')}</option>
+                          <option>{t('contact.subjectOptions.other')}</option>
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-solar-dark">Message</label>
+                        <label className="text-sm font-bold text-solar-dark">{t('contact.message')}</label>
                         <textarea 
                           name="message"
                           required
                           value={formData.message}
                           onChange={handleChange}
                           className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-solar-green transition-all h-40" 
-                          placeholder="How can we help you?"
+                          placeholder={t('contact.messagePlaceholder')}
                         ></textarea>
                       </div>
                       <button 
@@ -250,13 +249,13 @@ export default function Contact() {
                         disabled={status === 'loading'}
                         className="w-full bg-solar-green text-white py-5 rounded-xl font-bold text-lg hover:bg-solar-accent transition-all flex items-center justify-center gap-2 shadow-lg shadow-solar-green/20 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {status === 'loading' ? 'Sending...' : 'Send Message'}
+                        {status === 'loading' ? t('contact.sending') : t('contact.sendButton')}
                         <Send className="w-5 h-5" />
                       </button>
                       {status === 'error' && (
                         <p className="mt-4 text-red-500 flex items-center gap-2 justify-center font-medium">
                           <AlertCircle className="w-5 h-5" />
-                          Something went wrong. Please try again.
+                          {t('contact.errorMessage')}
                         </p>
                       )}
                     </form>
