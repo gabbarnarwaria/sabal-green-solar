@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Play, Sun } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
+  const { t } = useTranslation();
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center px-6">
       {/* Background Image with Overlay */}
@@ -53,15 +55,15 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="inline-block px-4 py-1.5 rounded-full bg-solar-green/20 text-solar-green text-sm font-bold mb-6 border border-solar-green/30 backdrop-blur-sm"
           >
-            Renewable Energy Excellence
+            {t('hero.badge')}
           </motion.span>
 
           <h1 className="text-4xl md:text-6xl text-white leading-tight mb-6 font-bold tracking-tight">
-            Powering a <span className="text-solar-green italic">Sustainable</span> Future with Solar Energy
+            {t('hero.title')} <span className="text-solar-green italic">{t('hero.titleHighlight')}</span> {t('hero.titleEnd')}
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
-            Leading solar energy company in Gwalior, MP specializing in the engineering, procurement, and construction of large-scale solar power plants for utilities,IPP and commercial clients.
+            {t('hero.description')}
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -69,7 +71,7 @@ export default function Hero() {
               to="/request-quote"
               className="bg-solar-green text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-solar-accent transition-all transform hover:-translate-y-1 shadow-lg shadow-solar-green/20"
             >
-              Start Your Project
+              {t('hero.startProject')}
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
@@ -79,7 +81,7 @@ export default function Hero() {
               <div className="w-8 h-8 rounded-full bg-solar-green/10 flex items-center justify-center">
                 <Play className="w-4 h-4 text-solar-green fill-current" />
               </div>
-              Our Story
+              {t('hero.ourStory')}
             </Link>
           </div>
         </motion.div>
@@ -97,8 +99,8 @@ export default function Hero() {
               <Sun className="w-6 h-6 text-solar-dark" />
             </div>
             <div>
-              <p className="text-white font-bold text-lg">40+ Kw</p>
-              <p className="text-gray-400 text-sm">Clean Energy Generated</p>
+              <p className="text-white font-bold text-lg">40+ {t('hero.installedCapacity')}</p>
+              <p className="text-gray-400 text-sm">{t('hero.capacityLabel')}</p>
             </div>
           </div>
         </motion.div>

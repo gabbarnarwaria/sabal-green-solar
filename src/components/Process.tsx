@@ -1,22 +1,17 @@
 import React from 'react';
 import { motion } from 'motion/react';
-
-const steps = [
-  { title: 'Site Analysis', desc: 'Detailed assessment of terrain, shading, and grid connectivity.' },
-  { title: 'Design & Engineering', desc: 'Optimized layout and electrical design for maximum output.' },
-  { title: 'Procurement', desc: 'Sourcing high-efficiency modules and robust inverters.' },
-  { title: 'Installation', desc: 'Expert execution by our certified solar technicians.' },
-  { title: 'Testing & Commissioning', desc: 'Rigorous quality checks before grid synchronization.' },
-  { title: 'Maintenance & Monitoring', desc: '24/7 performance tracking and proactive support.' },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Process() {
+  const { t } = useTranslation();
+  const steps = t('process.steps', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  
   return (
     <section className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <span className="text-solar-green font-bold tracking-widest uppercase text-sm">Our Process</span>
-          <h2 className="text-4xl md:text-5xl mt-4 text-solar-dark">How We <span className="text-solar-green">Deliver Excellence</span></h2>
+          <span className="text-solar-green font-bold tracking-widest uppercase text-sm">{t('process.badge')}</span>
+          <h2 className="text-4xl md:text-5xl mt-4 text-solar-dark">{t('process.title')} <span className="text-solar-green">{t('process.titleHighlight')}</span></h2>
         </div>
 
         <div className="relative">
@@ -37,7 +32,7 @@ export default function Process() {
                   <span className="text-xl font-bold">{index + 1}</span>
                 </div>
                 <h4 className="font-bold text-lg mb-3 group-hover:text-solar-green transition-colors text-solar-dark">{step.title}</h4>
-                <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{step.description}</p>
               </motion.div>
             ))}
           </div>

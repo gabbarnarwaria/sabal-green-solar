@@ -1,0 +1,306 @@
+{
+  "nav": {
+    "home": "Home",
+    "company": "Company",
+    "services": "Services",
+    "calculator": "Calculator",
+    "careers": "Careers",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "badge": "Renewable Energy Excellence",
+    "title": "Powering a",
+    "titleHighlight": "Sustainable",
+    "titleEnd": "Future with Solar Energy",
+    "description": "Leading solar energy company in Gwalior, MP specializing in the engineering, procurement, and construction of large-scale solar power plants for utilities, IPP and commercial clients.",
+    "startProject": "Start Your Project",
+    "ourStory": "Our Story",
+    "installedCapacity": "Kw",
+    "capacityLabel": "Installed Capacity"
+  },
+  "stats": {
+    "projects": "Projects Delivered",
+    "capacity": "KW Generated",
+    "clients": "Happy Clients",
+    "co2": "Tons CO₂ Saved"
+  },
+  "about": {
+    "badge": "Why We Started",
+    "title": "Best Quality Solar for",
+    "titleHighlight": "Every Family",
+    "paragraph1": "At Sabal Green Solar, we understand that high electricity bills can be a burden for any middle-class family. That's why we bring you the world's best solar technology at prices that actually make sense. We don't just install panels; we build a lifelong relationship with you.",
+    "paragraph2": "Our dedicated team works tirelessly to ensure your home or business runs on free, clean energy. We listen to your problems, understand your needs, and provide solutions that work for years to come. With us, you're not just a client—you're part of our mission for a greener India.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To make solar energy affordable and easy for every common household by providing the best quality panels and honest service."
+    },
+    "team": {
+      "title": "Dedicated Team",
+      "description": "We are here to listen. Our team works personally with you to solve your energy problems and keep your lights on, forever."
+    },
+    "learnMore": "Learn More About Us"
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Sabal Green Solar?",
+    "subtitle": "Leading the solar revolution with expertise, quality, and commitment",
+    "experience": {
+      "title": "15+ Years Experience",
+      "description": "Proven track record in large-scale solar projects"
+    },
+    "quality": {
+      "title": "Premium Quality",
+      "description": "Only the highest grade solar panels and equipment"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock customer service and maintenance"
+    },
+    "warranty": {
+      "title": "25-Year Warranty",
+      "description": "Industry-leading warranty on all installations"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solar solutions for every need",
+    "residential": {
+      "title": "Residential Solar",
+      "description": "Custom solar solutions for homes"
+    },
+    "commercial": {
+      "title": "Commercial Solar",
+      "description": "Large-scale installations for businesses"
+    },
+    "industrial": {
+      "title": "Industrial Solar",
+      "description": "High-capacity systems for industries"
+    },
+    "maintenance": {
+      "title": "Maintenance & Support",
+      "description": "Ongoing care for optimal performance"
+    }
+  },
+  "process": {
+    "badge": "Our Process",
+    "title": "How We",
+    "titleHighlight": "Deliver Excellence",
+    "steps": [
+      {
+        "title": "Site Analysis",
+        "description": "Detailed assessment of terrain, shading, and grid connectivity."
+      },
+      {
+        "title": "Design & Engineering",
+        "description": "Optimized layout and electrical design for maximum output."
+      },
+      {
+        "title": "Procurement",
+        "description": "Sourcing high-efficiency modules and robust inverters."
+      },
+      {
+        "title": "Installation",
+        "description": "Expert execution by our certified solar technicians."
+      },
+      {
+        "title": "Testing & Commissioning",
+        "description": "Rigorous quality checks before grid synchronization."
+      },
+      {
+        "title": "Maintenance & Monitoring",
+        "description": "24/7 performance tracking and proactive support."
+      }
+    ]
+  },
+  "videos": {
+    "badge": "Watch & Learn",
+    "title": "Explore Our",
+    "titleHighlight": "Video Gallery",
+    "description": "Watch our latest solar installation projects, customer testimonials, and educational content about solar energy solutions.",
+    "viewMore": "Visit Our YouTube Channel",
+    "video1Title": "Solar Installation Project",
+    "video2Title": "Our Solar Technology",
+    "video3Title": "Customer Success Stories"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about solar energy",
+    "commonQuestions": "Common Questions",
+    "faqTitle": "Frequently Asked",
+    "faqTitleHighlight": "Questions",
+    "questions": [
+      {
+        "question": "What is Solar EPC?",
+        "answer": "EPC stands for Engineering, Procurement, and Construction. A Solar EPC company like Sabal Green provides end-to-end solar energy solutions, including designing the system, procuring all necessary components, and installing the entire project."
+      },
+      {
+        "question": "How long does a solar installation take?",
+        "answer": "The timeline varies based on the project size. A residential rooftop system typically takes 2-4 days, while large industrial or utility-scale projects can take several weeks to months, including planning and approvals."
+      },
+      {
+        "question": "What are the maintenance requirements for solar panels?",
+        "answer": "Solar panels require minimal maintenance. Regular cleaning to remove dust and debris is usually sufficient. We also provide professional O&M (Operations & Maintenance) services to ensure your system performs at peak efficiency."
+      },
+      {
+        "question": "Is my roof suitable for solar panels?",
+        "answer": "Most roofs are suitable for solar. Our engineering team conducts a thorough site assessment to evaluate roof structural integrity, orientation, and potential shading issues before designing your custom solar solution."
+      },
+      {
+        "question": "What is the typical ROI for a solar project?",
+        "answer": "For industrial and commercial projects, the typical return on investment (ROI) is between 3 to 5 years, depending on energy consumption patterns and local electricity tariffs. After that, the electricity generated is essentially free for the remaining 20+ years of the system's life."
+      },
+      {
+        "question": "What is the average lifespan of a solar panel system, and does it require heavy maintenance?",
+        "answer": {
+          "intro": "Solar panels are built to withstand harsh Indian weather conditions—such as extreme summer heat, monsoon rains, and heavy winds—and have a lifespan of 25 to 30 years. Most reputable manufacturers provide a 25-year performance warranty, guaranteeing that the panels will still operate at over 80% efficiency even after two and a half decades.",
+          "maintenance": "The system operates on very low maintenance because it has no moving parts. The only recurring requirements are:",
+          "cleaning": {
+            "title": "Cleaning:",
+            "description": "Wipe or hose down the panels with water once every two weeks to remove dust, bird droppings, or pollution that can block sunlight."
+          },
+          "inverter": {
+            "title": "Inverter Replacement:",
+            "description": "The solar inverter, which converts the electricity for home use, generally has a lifespan of 10 to 12 years and may need to be replaced or serviced once during the system's entire lifecycle."
+          }
+        }
+      },
+      {
+        "question": "How much money can I save on electricity bills, and what is the return on investment (ROI) period?",
+        "answer": {
+          "intro": "A solar panel system reduces your grid electricity consumption by 60% to 100%, depending on your usage and system size. It generates electricity at an effective cost of roughly ₹2.50 per unit, compared to average Indian commercial/residential grid tariffs that range between ₹7 and ₹12 per unit.",
+          "monthlySavings": {
+            "title": "Monthly Savings:",
+            "description": "A standard 3 kW system generates roughly 360 to 450 units of electricity per month, saving a household approximately ₹3,000 to ₹4,500 every month on their electricity bill."
+          },
+          "paybackPeriod": {
+            "title": "Payback Period (ROI):",
+            "description": "For residential installations utilizing the central subsidy, the initial investment is completely recovered in 3 to 4 years. For small commercial businesses, the payback period is 3.5 to 5 years due to higher commercial grid tariffs and tax-saving benefits like accelerated depreciation."
+          },
+          "longTermProfits": {
+            "title": "Long-Term Profits:",
+            "description": "After the payback period, the electricity generated by the system for the remaining 20+ years of its life is essentially free."
+          }
+        }
+      }
+    ]
+  },
+  "footer": {
+    "description": "Leading solar energy solutions in Gwalior, Madhya Pradesh. Committed to a sustainable future.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "about": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "residential": "Residential Solar",
+    "commercial": "Commercial Solar",
+    "industrial": "Industrial Solar",
+    "maintenance": "Maintenance",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact Us",
+    "address": "Address",
+    "addressText": "Gwalior, Madhya Pradesh, India",
+    "email": "Email",
+    "phone": "Phone",
+    "copyright": "© 2024 Sabal Green Solar Pvt Ltd. All rights reserved."
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "heroTitle": "Let's Power Your",
+    "heroTitleHighlight": "Future",
+    "heroDescription": "Have a project in mind? Our team of experts is ready to help you transition to clean, sustainable energy.",
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "officeAddress": "Office Address",
+    "officeAddressText": "BL 135 Deen Dayal Nagar, Gwalior, Madhya Pradesh",
+    "phoneNumber": "Phone Number",
+    "phoneNumber1": "+91 8982823613",
+    "phoneNumber2": "+91 8962295336",
+    "emailAddress": "Email Address",
+    "emailText": "info@sabalgreensolar.com",
+    "workingHours": "Working Hours",
+    "workingHoursText": "Mon - Sat: 9:00 AM - 6:00 PM",
+    "followUs": "Follow Us",
+    "formTitle": "Send us a Message",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Avinash",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Gaur",
+    "email": "Email Address",
+    "emailPlaceholder": "avinash@gmail.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+91 98765 43210",
+    "subject": "Subject",
+    "subjectOptions": {
+      "inquiry": "Solar Installation Inquiry",
+      "service": "Service & Maintenance",
+      "partnership": "Partnership Opportunity",
+      "other": "Other"
+    },
+    "message": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thank you for reaching out. We have received your message and will get back to you as soon as possible.",
+    "sendAnother": "Send another message",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "quote": {
+    "badge": "Request a Quote",
+    "heroTitle": "Start Your",
+    "heroTitleHighlight": "Solar Journey",
+    "heroDescription": "Fill out the form below to receive a customized solar energy solution tailored to your specific needs and location."
+  },
+  "inquiryForm": {
+    "title": "Get a Free",
+    "titleHighlight": "Solar Quote",
+    "description": "Fill out the form and our experts will get back to you with a customized solar solution for your needs.",
+    "benefits": {
+      "survey": "Free Site Survey",
+      "feasibility": "Technical Feasibility",
+      "roi": "Financial ROI Analysis"
+    },
+    "fields": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Avinash Gaur",
+      "phoneNumber": "Phone Number",
+      "phoneNumberPlaceholder": "+91 98765 43210",
+      "email": "Email Address",
+      "emailPlaceholder": "avinash@gmail.com",
+      "installationType": "Installation Type",
+      "location": "Project Location",
+      "locationPlaceholder": "City, State"
+    },
+    "installationTypes": {
+      "industrialRooftop": "Industrial Rooftop",
+      "commercialRooftop": "Commercial Rooftop",
+      "residentialRooftop": "Residential Rooftop",
+      "utilityScale": "Utility Scale Farm",
+      "agricultural": "Agricultural Pump"
+    },
+    "submitButton": "Request Quote",
+    "submitting": "Sending...",
+    "successTitle": "Request Received!",
+    "successMessage": "Thank you for your interest. Our team will review your requirements and contact you shortly.",
+    "sendAnother": "Send another request",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "backToHome": "Back to Home",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success!"
+  },
+  "companyPage": {
+    "badge": "Excellence in Solar EPC",
+    "title": "Our",
+    "titleHighlight": "Company",
+    "description": "Sabal Green Solar is committed to excellence in renewable energy, driven by a passion for sustainability and a team of industry experts."
+  }
+}

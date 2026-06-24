@@ -7,10 +7,12 @@ import Services from '@/src/components/Services';
 import PriceList from '@/src/components/PriceList';
 import Process from '@/src/components/Process';
 import Projects from '@/src/components/Projects';
+import VideoSection from '@/src/components/VideoSection';
 import Impact from '@/src/components/Impact';
 import FAQ from '@/src/components/FAQ';
 import Blog from '@/src/components/Blog';
 import InquiryForm from '@/src/components/InquiryForm';
+import GoogleReviews from '@/src/components/GoogleReviews';
 import Footer from '@/src/components/Footer';
 
 export default function Home() {
@@ -19,15 +21,16 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Stats />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <PriceList />
-      <Services />
+      {/* <Services /> */}
       <Process />
       <Projects />
-      <Impact />
+      <VideoSection />
       <FAQ />
-      <Blog />
+      {/* <Blog /> */}
       <InquiryForm />
+      <GoogleReviews />
       <Footer />
     </main>
   );

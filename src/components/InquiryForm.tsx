@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function InquiryForm() {
+  const { t } = useTranslation();
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
     fullName: '',
@@ -62,28 +64,28 @@ export default function InquiryForm() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
           <div className="lg:w-1/3 bg-solar-dark p-12 text-white flex flex-col justify-center">
-            <h3 className="text-3xl font-bold mb-6">Get a Free <span className="text-solar-vibrant">Solar Quote</span></h3>
+            <h3 className="text-3xl font-bold mb-6">{t('inquiryForm.title')} <span className="text-solar-vibrant">{t('inquiryForm.titleHighlight')}</span></h3>
             <p className="text-gray-400 mb-8">
-              Fill out the form and our experts will get back to you with a customized solar solution for your needs.
+              {t('inquiryForm.description')}
             </p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-solar-vibrant rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-solar-dark rounded-full" />
                 </div>
-                <span>Free Site Survey</span>
+                <span>{t('inquiryForm.benefits.survey')}</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-solar-vibrant rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-solar-dark rounded-full" />
                 </div>
-                <span>Technical Feasibility</span>
+                <span>{t('inquiryForm.benefits.feasibility')}</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-solar-vibrant rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-solar-dark rounded-full" />
                 </div>
-                <span>Financial ROI Analysis</span>
+                <span>{t('inquiryForm.benefits.roi')}</span>
               </li>
             </ul>
           </div>
@@ -96,21 +98,21 @@ export default function InquiryForm() {
                 className="h-full flex flex-col items-center justify-center text-center py-12"
               >
                 <CheckCircle2 className="w-20 h-20 text-solar-green mb-6" />
-                <h3 className="text-3xl font-bold text-solar-dark mb-4">Request Received!</h3>
+                <h3 className="text-3xl font-bold text-solar-dark mb-4">{t('inquiryForm.successTitle')}</h3>
                 <p className="text-gray-600 max-w-md">
-                  Thank you for your interest. Our team will review your requirements and contact you shortly.
+                  {t('inquiryForm.successMessage')}
                 </p>
                 <button 
                   onClick={() => setStatus('idle')}
                   className="mt-8 text-solar-green font-bold hover:underline"
                 >
-                  Send another request
+                  {t('inquiryForm.sendAnother')}
                 </button>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-solar-dark">Full Name</label>
+                  <label className="text-sm font-bold text-solar-dark">{t('inquiryForm.fields.fullName')}</label>
                   <input 
                     type="text" 
                     name="fullName"
@@ -118,11 +120,11 @@ export default function InquiryForm() {
                     value={formData.fullName}
                     onChange={handleChange}
                     className="w-full px-6 py-4 rounded-xl bg-solar-light border-none focus:ring-2 focus:ring-solar-green transition-all" 
-                    placeholder="Avinash Gaur" 
+                    placeholder={t('inquiryForm.fields.fullNamePlaceholder')}
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-solar-dark">Phone Number</label>
+                  <label className="text-sm font-bold text-solar-dark">{t('inquiryForm.fields.phoneNumber')}</label>
                   <input 
                     type="tel" 
                     name="phoneNumber"
@@ -130,11 +132,11 @@ export default function InquiryForm() {
                     value={formData.phoneNumber}
                     onChange={handleChange}
                     className="w-full px-6 py-4 rounded-xl bg-solar-light border-none focus:ring-2 focus:ring-solar-green transition-all" 
-                    placeholder="+91 98765 43210" 
+                    placeholder={t('inquiryForm.fields.phoneNumberPlaceholder')}
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-solar-dark">Email Address</label>
+                  <label className="text-sm font-bold text-solar-dark">{t('inquiryForm.fields.email')}</label>
                   <input 
                     type="email" 
                     name="email"
@@ -142,26 +144,26 @@ export default function InquiryForm() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-6 py-4 rounded-xl bg-solar-light border-none focus:ring-2 focus:ring-solar-green transition-all" 
-                    placeholder="avinash@gmail.com" 
+                    placeholder={t('inquiryForm.fields.emailPlaceholder')}
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-solar-dark">Installation Type</label>
+                  <label className="text-sm font-bold text-solar-dark">{t('inquiryForm.fields.installationType')}</label>
                   <select 
                     name="installationType"
                     value={formData.installationType}
                     onChange={handleChange}
                     className="w-full px-6 py-4 rounded-xl bg-solar-light border-none focus:ring-2 focus:ring-solar-green transition-all"
                   >
-                    <option>Industrial Rooftop</option>
-                    <option>Commercial Rooftop</option>
-                    <option>Residential Rooftop</option>
-                    <option>Utility Scale Farm</option>
-                    <option>Agricultural Pump</option>
+                    <option>{t('inquiryForm.installationTypes.industrialRooftop')}</option>
+                    <option>{t('inquiryForm.installationTypes.commercialRooftop')}</option>
+                    <option>{t('inquiryForm.installationTypes.residentialRooftop')}</option>
+                    <option>{t('inquiryForm.installationTypes.utilityScale')}</option>
+                    <option>{t('inquiryForm.installationTypes.agricultural')}</option>
                   </select>
                 </div>
                 <div className="md:col-span-2 space-y-2">
-                  <label className="text-sm font-bold text-solar-dark">Project Location</label>
+                  <label className="text-sm font-bold text-solar-dark">{t('inquiryForm.fields.location')}</label>
                   <input 
                     type="text" 
                     name="location"
@@ -169,7 +171,7 @@ export default function InquiryForm() {
                     value={formData.location}
                     onChange={handleChange}
                     className="w-full px-6 py-4 rounded-xl bg-solar-light border-none focus:ring-2 focus:ring-solar-green transition-all" 
-                    placeholder="City, State" 
+                    placeholder={t('inquiryForm.fields.locationPlaceholder')}
                   />
                 </div>
                 <div className="md:col-span-2">
@@ -178,13 +180,13 @@ export default function InquiryForm() {
                     disabled={status === 'loading'}
                     className="w-full bg-solar-green text-white py-5 rounded-xl font-bold text-lg hover:bg-solar-vibrant hover:text-solar-dark transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {status === 'loading' ? 'Sending...' : 'Request Quote'}
+                    {status === 'loading' ? t('inquiryForm.submitting') : t('inquiryForm.submitButton')}
                     <Send className="w-5 h-5" />
                   </button>
                   {status === 'error' && (
                     <p className="mt-4 text-red-500 flex items-center gap-2 justify-center font-medium">
                       <AlertCircle className="w-5 h-5" />
-                      Something went wrong. Please try again.
+                      {t('inquiryForm.errorMessage')}
                     </p>
                   )}
                 </div>

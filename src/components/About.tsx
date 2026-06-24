@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Shield, Target, Eye } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -32,13 +35,13 @@ export default function About() {
             className="space-y-8"
           >
             <div>
-              <span className="text-solar-green font-bold tracking-widest uppercase text-sm">Why We Started</span>
-              <h2 className="text-4xl md:text-5xl mt-4 mb-6">Best Quality Solar for <span className="text-solar-green">Every Family</span></h2>
+              <span className="text-solar-green font-bold tracking-widest uppercase text-sm">{t('about.badge')}</span>
+              <h2 className="text-4xl md:text-5xl mt-4 mb-6">{t('about.title')} <span className="text-solar-green">{t('about.titleHighlight')}</span></h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                At Sabal Green Solar, we understand that high electricity bills can be a burden for any middle-class family. That's why we bring you the world's best solar technology at prices that actually make sense. We don't just install panels; we build a lifelong relationship with you.
+                {t('about.paragraph1')}
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mt-4">
-                Our dedicated team works tirelessly to ensure your home or business runs on free, clean energy. We listen to your problems, understand your needs, and provide solutions that work for years to come. With us, you're not just a client—you're part of our mission for a greener India.
+                {t('about.paragraph2')}
               </p>
             </div>
 
@@ -47,20 +50,20 @@ export default function About() {
                 <div className="w-12 h-12 bg-solar-green rounded-xl flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="font-bold text-lg mb-2">Our Mission</h4>
-                <p className="text-gray-500 text-sm">To make solar energy affordable and easy for every common household by providing the best quality panels and honest service.</p>
+                <h4 className="font-bold text-lg mb-2">{t('about.mission.title')}</h4>
+                <p className="text-gray-500 text-sm">{t('about.mission.description')}</p>
               </div>
               <div className="p-6 bg-solar-light rounded-2xl border border-solar-green/10">
                 <div className="w-12 h-12 bg-solar-vibrant rounded-xl flex items-center justify-center mb-4">
                   <Eye className="w-6 h-6 text-solar-dark" />
                 </div>
-                <h4 className="font-bold text-lg mb-2">Dedicated Team</h4>
-                <p className="text-gray-500 text-sm">We are here to listen. Our team works personally with you to solve your energy problems and keep your lights on, forever.</p>
+                <h4 className="font-bold text-lg mb-2">{t('about.team.title')}</h4>
+                <p className="text-gray-500 text-sm">{t('about.team.description')}</p>
               </div>
             </div>
 
             <button className="group flex items-center gap-3 font-bold text-solar-green hover:gap-5 transition-all">
-              Learn More About Us
+              {t('about.learnMore')}
               <div className="w-10 h-10 bg-solar-green text-white rounded-full flex items-center justify-center group-hover:bg-solar-vibrant group-hover:text-solar-dark transition-colors">
                 <Shield className="w-5 h-5" />
               </div>

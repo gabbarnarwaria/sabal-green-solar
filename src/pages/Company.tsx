@@ -4,8 +4,10 @@ import About from '@/src/components/About';
 import Team from '@/src/components/Team';
 import Footer from '@/src/components/Footer';
 import { motion, useScroll, useTransform } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 export default function Company() {
+  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -52,7 +54,7 @@ export default function Company() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest uppercase bg-solar-green/20 text-solar-green border border-solar-green/30 rounded-full backdrop-blur-md"
             >
-              Excellence in Solar EPC
+              {t('companyPage.badge')}
             </motion.span>
             
             <motion.h1 
@@ -61,7 +63,7 @@ export default function Company() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-5xl md:text-8xl font-bold mb-8 text-white tracking-tight"
             >
-              Our <span className="text-solar-green">Company</span>
+              {t('companyPage.title')} <span className="text-solar-green">{t('companyPage.titleHighlight')}</span>
             </motion.h1>
             
             <motion.p 
@@ -70,7 +72,7 @@ export default function Company() {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
             >
-              Sabal Green Solar is committed to excellence in renewable energy, driven by a passion for sustainability and a team of industry experts.
+              {t('companyPage.description')}
             </motion.p>
           </motion.div>
         </div>

@@ -67,58 +67,7 @@ export default function Careers() {
     <main className="min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-40 pb-20 px-6 bg-solar-light relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-          <img
-            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800"
-            alt="Team"
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-2xl"
-          >
-            <span className="text-solar-green font-bold tracking-widest uppercase text-sm">Join Our Team</span>
-            <h1 className="text-5xl md:text-6xl mt-6 mb-8 text-solar-dark">Build Your Career in <span className="text-solar-green">Renewable Energy</span></h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              At Sabal Green Solar, we are looking for passionate individuals who want to make a real impact on the planet. Join us in our mission to power a greener future.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-solar-dark">Why Work With Us?</h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">We offer more than just a job; we offer a platform to grow and contribute to a sustainable world.</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-solar-light p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-solar-green group transition-all duration-500"
-              >
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                  <benefit.icon className="w-7 h-7 text-solar-green" />
-                </div>
-                <h4 className="text-xl font-bold mb-3 text-solar-dark group-hover:text-white transition-colors">{benefit.title}</h4>
-                <p className="text-gray-500 text-sm leading-relaxed group-hover:text-white/80 transition-colors">{benefit.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* Application Form */}
       <section className="py-24 px-6 bg-solar-light">
