@@ -288,6 +288,17 @@
     "sendAnother": "एक और अनुरोध भेजें",
     "errorMessage": "कुछ गलत हो गया। कृपया पुनः प्रयास करें।"
   },
+  "projects": {
+    "badge": "हमारा पोर्टफोलियो",
+    "title": "विशेष रूप से",
+    "titleHighlight": "सौर परियोजनाएं",
+    "showMoreImages": "अधिक छवियाँ देखें"
+  },
+  "projectGallery": {
+    "pageTitle": "ग्राहक परियोजना गैलरी",
+    "backToHome": "← होम पर वापस जाएं",
+    "imageAlt": "ग्राहक परियोजना"
+  },
   "common": {
     "learnMore": "और जानें",
     "readMore": "और पढ़ें",

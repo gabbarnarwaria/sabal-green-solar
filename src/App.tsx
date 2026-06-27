@@ -7,6 +7,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import RequestQuote from './pages/RequestQuote';
 import SolarCalculator from './pages/SolarCalculator';
+import ProjectGallery from './pages/ProjectGallery';
 
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -41,6 +42,7 @@ export default function App() {
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/request-quote" element={<RequestQuote />} />
         <Route path="/calculator" element={<SolarCalculator />} />
+        <Route path="/project-gallery" element={<ProjectGallery />} />
       </Routes>
     </Router>
   );
