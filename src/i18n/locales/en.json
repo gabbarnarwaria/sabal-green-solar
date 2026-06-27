@@ -288,6 +288,17 @@
     "sendAnother": "Send another request",
     "errorMessage": "Something went wrong. Please try again."
   },
+  "projects": {
+    "badge": "Our Portfolio",
+    "title": "Featured",
+    "titleHighlight": "Solar Projects",
+    "showMoreImages": "Show more images"
+  },
+  "projectGallery": {
+    "pageTitle": "Customer Project Gallery",
+    "backToHome": "← Back to Home",
+    "imageAlt": "Customer Project"
+  },
   "common": {
     "learnMore": "Learn More",
     "readMore": "Read More",

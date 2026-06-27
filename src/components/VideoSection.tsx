@@ -7,7 +7,7 @@ const videos = [
   {
     // Replace with your actual video IDs from your channel
     // You can get the video ID from the YouTube URL: https://www.youtube.com/watch?v=VIDEO_ID
-    videoId: '56iFn_L80Vc', // Replace this with your actual video ID
+    videoId: '1ZD15BXAlKI', // Replace this with your actual video ID
     titleKey: 'videos.video1Title'
   },
   {
